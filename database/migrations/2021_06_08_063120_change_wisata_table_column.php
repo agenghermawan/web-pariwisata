@@ -13,9 +13,9 @@ class ChangeWisataTableColumn extends Migration
      */
     public function up()
     {
-        // Schema::table('wisata', function (Blueprint $table) {
-        //     $table->string('deskripsi',5000)->change();
-        // });
+        Schema::table('wisata', function (Blueprint $table) {
+            $table->string('deskripsi',5000)->change();
+        });
     }
 
     /**

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddRolesToUsers extends Migration
+class AddGmapsToWisata extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class AddRolesToUsers extends Migration
      */
     public function up()
     {
-        // Schema::table('users', function (Blueprint $table) {
-        //     $table->string('roles')->default('USER');
-        // });
+        Schema::table('wisata', function (Blueprint $table) {
+            $table->string('location',1000)->nullable();
+        });
     }
 
     /**
@@ -25,7 +25,7 @@ class AddRolesToUsers extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
+        Schema::table('wisata', function (Blueprint $table) {
             //
         });
     }

@@ -76,53 +76,58 @@
             <section class="section-popular-content" id="popularContent">
                 <div class="container">
                     <div class="section-popular-travel row justify-content-center">
-                        <div class="col-sm-6 col-md-4 col-lg-3">
-                            <div class="card-travel text-center d-flex flex-column rounded"
-                                style="background-image: url('frontend/frontend/images/purin.jpg');">
-                                <div class="travel-location">TEGAL</div>
-                                <div class="travel-button mt-auto">
-                                    <a href="details.html" class="btn btn-travel-details px-4">
-                                        View Details
-                                    </a>
+                        @foreach ($takealam as $item)
+                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                <div class="card-travel text-center d-flex flex-column rounded"
+                                    style="background-image: url('{{ url($item->galleries[0]->Photo) }} ');">
+                                    <div class="travel-location">{{ $item->kabupaten }}</div>
+                                    <div class="travel-button mt-auto">
+                                        <a href="details.html" class="btn btn-travel-details px-4">
+                                            View Details
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="col-sm-6 col-md-4 col-lg-3">
-                            <div class="card-travel text-center d-flex flex-column rounded"
-                                style="background-image: url('frontend/frontend/images/muncar.jpg');background-position: center;">
-                                <div class="travel-location">PEKALONGAN</div>
-                                <div class="travel-button mt-auto">
-                                    <a href="details.html" class="btn btn-travel-details px-4">
-                                        View Details
-                                    </a>
+                        @endforeach
+                        @foreach ($takesejarah as $item)
+                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                <div class="card-travel text-center d-flex flex-column rounded"
+                                    style="background-image: url('{{ url($item->galleries[0]->Photo) }} ');">
+                                    <div class="travel-location">{{ $item->kabupaten }}</div>
+                                    <div class="travel-button mt-auto">
+                                        <a href="details.html" class="btn btn-travel-details px-4">
+                                            View Details
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="col-sm-6 col-md-4 col-lg-3">
-                            <div class="card-travel text-center d-flex flex-column rounded"
-                                style="background-image: url('frontend/frontend/images/lerengkelir.jpg');">
-                                <div class="travel-location">SEMARANG</div>
-                                <div class="travel-button mt-auto">
-                                    <a href="details.html" class="btn btn-travel-details px-4">
-                                        View Details
-                                    </a>
+                        @endforeach
+                        @foreach ($takekuliner as $item)
+                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                <div class="card-travel text-center d-flex flex-column rounded"
+                                    style="background-image: url('{{ url($item->galleries[0]->Photo) }} ');">
+                                    <div class="travel-location">{{ $item->kabupaten }}</div>
+                                    <div class="travel-button mt-auto">
+                                        <a href="details.html" class="btn btn-travel-details px-4">
+                                            View Details
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-sm-6 col-md-4 col-lg-3">
-                            <div class="card-travel text-center d-flex flex-column rounded"
-                                style="background-image: url('frontend/frontend/images/morosari.jpg');background-position: center;">
-                                <div class="travel-location">DEMAK</div>
-                                <div class="travel-button mt-auto">
-                                    <a href="details.html" class="btn btn-travel-details px-4">
-                                        View Details
-                                    </a>
+                        @endforeach
+                        @foreach ($takekeluarga as $item)
+                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                <div class="card-travel text-center d-flex flex-column rounded"
+                                    style="background-image: url('{{ url($item->galleries[0]->Photo) }} ');">
+                                    <div class="travel-location">{{ $item->kabupaten }}</div>
+                                    <div class="travel-button mt-auto">
+                                        <a href="details.html" class="btn btn-travel-details px-4">
+                                            View Details
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-
+                        @endforeach
                     </div>
                 </div>
             </section>
@@ -155,18 +160,18 @@
                                 <div id="carouselExampleControls1" class="carousel slide" data-ride="carousel">
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
-                                            <img class="d-block w-100 rounded img-thumbnail"
+                                            <img class="d-block w-100 rounded img-thumbnail" style="height: 600px"
                                                 src="{{ asset('frontend/frontend/images/sewu.jpg') }}"
                                                 alt="First slide">
                                         </div>
                                         <div class="carousel-item">
-                                            <img class="d-block w-100 rounded img-thumbnail"
-                                                src="{{ asset('frontend/frontend/images/sewu.jpg') }}"
+                                            <img class="d-block w-100 rounded img-thumbnail" style="height: 600px"
+                                                src="{{ asset('frontend/frontend/images/borobudur.jpg') }}"
                                                 alt="Second slide">
                                         </div>
                                         <div class="carousel-item">
-                                            <img class="d-block w-100 rounded img-thumbnail"
-                                                src="{{ asset('frontend/frontend/images/sewu.jpg') }}"
+                                            <img class="d-block w-100 rounded img-thumbnail" style="height: 600px"
+                                                src=" {{ asset('frontend/frontend/images/umbulponggok.jpg') }}"
                                                 alt="Third slide">
                                         </div>
                                     </div>
@@ -185,42 +190,53 @@
                             <div class="col-lg-12">
 
                                 <div class="row mt-5">
-                                    <div class="col-lg-3 col-md-6 col-sm-12">
-                                        <img src="{{ asset('frontend/frontend/images/sateblengong.jpg') }}"
-                                            width="400px" class="img-thumbnail" data-aos="fade-zoom-in" width="280px"
-                                            data-aos-easing="ease-in-back" data-aos-delay="600" data-aos-offset="0"
-                                            height=" 182px" alt="">
-                                        <div class="caption">
-                                            <p>Lorem ipsum...</p>
+                                    @foreach ($takesejarah as $item)
+                                        <div class="col-lg-3 col-md-6 col-sm-12" data-aos="fade-zoom-in"
+                                            data-aos-easing="ease-in-back" data-aos-delay="600" data-aos-offset="0">
+                                            <img src="{{ url($item->galleries[0]->Photo) }}" class="img-thumbnail"
+                                                style="width: 300px;height:220px" data-aos="fade-zoom-in"
+                                                data-aos-easing="ease-in-back" data-aos-delay="600" data-aos-offset="0"
+                                                alt="">
+                                            <div class="caption text-center">
+                                                <p>Wisata Sejarah</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-6 col-sm-12">
-                                        <img src="{{ asset('frontend/frontend/images/sateblengong.jpg') }}"
-                                            width="400px" class="img-thumbnail" data-aos="fade-zoom-in" width="280px"
-                                            data-aos-easing="ease-in-back" data-aos-delay="600" data-aos-offset="0"
-                                            height=" 182px" alt="">
-                                        <div class="caption">
-                                            <p>Lorem ipsum...</p>
+                                    @endforeach
+                                    @foreach ($takealam as $item)
+                                        <div class="col-lg-3 col-md-6 col-sm-12" data-aos="fade-zoom-in"
+                                            data-aos-easing="ease-in-back" data-aos-delay="600" data-aos-offset="0">
+                                            <img src="{{ url($item->galleries[0]->Photo) }}" class="img-thumbnail"
+                                                style="width: 300px;height:220px" data-aos="fade-zoom-in"
+                                                data-aos-easing="ease-in-back" data-aos-delay="600" data-aos-offset="0"
+                                                alt="">
+                                            <div class="caption text-center">
+                                                <p>Wisata Sejarah</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-6 col-sm-12">
-                                        <img src="{{ asset('frontend/frontend/images/sateblengong.jpg') }}"
-                                            width="400px" class="img-thumbnail" data-aos="fade-zoom-in" width="280px"
-                                            data-aos-easing="ease-in-back" data-aos-delay="600" data-aos-offset="0"
-                                            height=" 182px" alt="">
-                                        <div class="caption">
-                                            <p>Lorem ipsum...</p>
+                                    @endforeach
+                                    @foreach ($takekeluarga as $item)
+                                        <div class="col-lg-3 col-md-6 col-sm-12" data-aos="fade-zoom-in"
+                                            data-aos-easing="ease-in-back" data-aos-delay="600" data-aos-offset="0">
+                                            <img src="{{ url($item->galleries[0]->Photo) }}"
+                                                style="width: 300px;height:220px" class="img-thumbnail"
+                                                data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
+                                                data-aos-delay="600" data-aos-offset="0" height=" 182px" alt="">
+                                            <div class="caption text-center">
+                                                <p>Wisata Sejarah</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-6 col-sm-12">
-                                        <img src="{{ asset('frontend/frontend/images/sateblengong.jpg') }}"
-                                            width="400px" class="img-thumbnail" data-aos="fade-zoom-in" width="280px"
-                                            data-aos-easing="ease-in-back" data-aos-delay="600" data-aos-offset="0"
-                                            height=" 182px" alt="">
-                                        <div class="caption">
-                                            <p>Lorem ipsum...</p>
+                                    @endforeach
+                                    @foreach ($takekuliner as $item)
+                                        <div class="col-lg-3 col-md-6 col-sm-12" data-aos="fade-zoom-in"
+                                            data-aos-easing="ease-in-back" data-aos-delay="600" data-aos-offset="0">
+                                            <img src="{{ url($item->galleries[0]->Photo) }}"
+                                                style="width: 300px;height:220px" class="img-thumbnail" height=" 182px"
+                                                alt="">
+                                            <div class="caption text-center">
+                                                <p>Wisata Sejarah</p>
+                                            </div>
                                         </div>
-                                    </div>
+                                    @endforeach
                                 </div>
                             </div>
 
@@ -241,60 +257,18 @@
                 </div>
                 <div class="col-md-12 mt-5">
                     <div class="row">
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <img class="card-img-top" src="{{ asset('frontend/frontend/images/tehkaligua.jpg') }}"
-                                alt="Card image cap">
-                            <div class="card-body">
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk
-                                    of the card's content.</p>
+                        @foreach ($take6 as $item)
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <img class="card-img-top" src="{{ url($item->galleries[0]->Photo) }}" width="220px"
+                                    height="220px" alt="Card image cap">
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        {{ $item->nama }}
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <img class="card-img-top" src="{{ asset('frontend/frontend/images/tehkaligua.jpg') }}"
-                                alt="Card image cap">
-                            <div class="card-body">
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk
-                                    of the card's content.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <img class="card-img-top" src="{{ asset('frontend/frontend/images/tehkaligua.jpg') }}"
-                                alt="Card image cap">
-                            <div class="card-body">
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk
-                                    of the card's content.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <img class="card-img-top" src="{{ asset('frontend/frontend/images/tehkaligua.jpg') }}"
-                                alt="Card image cap">
-                            <div class="card-body">
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk
-                                    of the card's content.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <img class="card-img-top" src="{{ asset('frontend/frontend/images/tehkaligua.jpg') }}"
-                                alt="Card image cap">
-                            <div class="card-body">
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk
-                                    of the card's content.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <img class="card-img-top" src="{{ asset('frontend/frontend/images/tehkaligua.jpg') }}"
-                                alt="Card image cap">
-                            <div class="card-body">
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk
-                                    of the card's content.</p>
-                            </div>
-                        </div>
+                        @endforeach
+
                     </div>
 
                 </div>

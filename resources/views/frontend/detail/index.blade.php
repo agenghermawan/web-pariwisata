@@ -97,12 +97,12 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="card card-details card-right">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d506587.38452864334!2d108.84312683281252!3d-7.2733561000000035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f8c76ae3df821%3A0x2011c84f029d4905!2sWisata%20Tuk%20Bening%20Dan%20Gua%20Jepang!5e0!3m2!1sid!2sid!4v1622987617959!5m2!1sid!2sid"
-                                width="300" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            <iframe src="{{ $data->location }}" width="300" height="450" style="border:0;"
+                                allowfullscreen="" loading="lazy"></iframe>
                         </div>
                         <div class="join-container">
-                            <a href="checkout.html" class="btn btn-block btn-join-now mt-3 py-2">
+                            <a href="{{ $data->locationmaps }}" class="btn btn-block btn-join-now mt-3 py-2"
+                                target="_blank">
                                 Join Now
                             </a>
                         </div>

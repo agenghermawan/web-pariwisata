@@ -23,9 +23,8 @@ use App\Http\Controllers\WisataKeluargaController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+
+Route::get('/',[App\Http\Controllers\LandingPageController::class, 'index'])->name('landingpage');
 
 Route::get('/kontak', function () {
     return view('frontend.kontak.index');

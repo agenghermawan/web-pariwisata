@@ -106,6 +106,36 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="">
+                                                <h5>Location Gmaps :</h5>
+                                            </label>
+                                            <div class="input-group input-group-merge">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i
+                                                            class="ni ni-square-pin text-primary"></i></span>
+                                                </div>
+                                                <input class="form-control" name="location" type="text"
+                                                    value="{{ $data->location }}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="">
+                                                <h5>Location Gmaps :</h5>
+                                            </label>
+                                            <div class="input-group input-group-merge">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i
+                                                            class="ni ni-square-pin text-primary"></i></span>
+                                                </div>
+                                                <input class="form-control" name="locationmaps" type="text"
+                                                    value="{{ $data->locationmaps }}">
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="">
